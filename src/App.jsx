@@ -441,7 +441,7 @@ export default function CoastFIRECalculator() {
     let coastMessage;
     if (balance >= coastNumber) coastMessage = { text: "You can stop contributing now!", type: "success" };
     else if (coastAge !== null && coastAge > currentAge) coastMessage = { text: `You can stop contributing at age ${coastAge}`, type: "success" };
-    else coastMessage = { text: `No coast period — keep investing until age ${retireAge}`, type: "warning" };
+    else coastMessage = { text: `No coast period. Keep investing until age ${retireAge}`, type: "warning" };
 
     return {
       realReturn, yearsToRetire, annualContrib, retirementTarget, coastNumber,
@@ -558,7 +558,7 @@ export default function CoastFIRECalculator() {
               <div style={{ gridColumn: "1 / -1" }}>
                 <div style={{ background: "#fffbeb", borderRadius: 12, padding: "12px 16px", border: "1px solid #fde68a",
                   fontSize: 13, color: "#92400e", lineHeight: 1.6 }}>
-                  Good news — your money still lasts at these projected returns. But the 4% rule exists because markets have bad years too. Closing the gap gives you a bigger safety net for when that happens.
+                  Good news: your money still lasts at these projected returns. But the 4% rule exists because markets have bad years too. Closing the gap gives you a bigger safety net for when that happens.
                 </div>
               </div>
             )}
