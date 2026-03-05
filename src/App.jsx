@@ -441,7 +441,7 @@ export default function CoastFIRECalculator() {
     let coastMessage;
     if (balance >= coastNumber) coastMessage = { text: "You can stop contributing now!", type: "success" };
     else if (coastAge !== null && coastAge > currentAge) coastMessage = { text: `You can stop contributing at age ${coastAge}`, type: "success" };
-    else coastMessage = { text: `No coast period. Keep investing until age ${retireAge}`, type: "warning" };
+    else coastMessage = { text: `No coast period. Keep investing until age ${retireAge}.`, type: "warning" };
 
     return {
       realReturn, yearsToRetire, annualContrib, retirementTarget, coastNumber,
@@ -478,7 +478,7 @@ export default function CoastFIRECalculator() {
             padding: "18px 20px", textAlign: "left", boxShadow: "0 4px 16px rgba(0,0,0,0.05)" }}>
             <p style={{ fontSize: 14, color: "#374151", lineHeight: 1.65, margin: 0 }}>
               <strong style={{ color: "#7c3aed" }}>Coast FIRE</strong> is the point where your investments are large enough
-              that compound growth alone will carry you to your retirement goal — even if you never save another dollar.
+              that compound growth alone will carry you to your retirement goal, even if you never save another dollar.
             </p>
           </div>
         )}
@@ -681,11 +681,11 @@ export default function CoastFIRECalculator() {
           <div style={{ background: "#fff", borderRadius: 20, padding: "20px 20px 12px", marginTop: 10,
             border: "1px solid #f3f4f6", boxShadow: "0 1px 4px rgba(0,0,0,0.03)" }}>
             {[
-              ["🧭 A Compass, Not a GPS", "This calculator tells you if you're heading in the right direction — when you can ease off the gas and roughly how long your money will last. For the full picture, work with a financial planner."],
-              ["📊 Today's Dollars", "All values are in today's purchasing power. A 10% return with 3% inflation gives a real return of ~6.8%. Withdrawals are flat because they represent constant purchasing power — $75K always buys the same amount regardless of the year."],
-              ["🔥 Coast FIRE Age", "This is when your balance crosses the 'Coast Target' — the amount that would grow on its own to your retirement goal. After this age, you could stop contributing and still reach your target through growth alone."],
-              ["📈 What If I Keep Investing?", "The chart shows both paths — what happens if you coast (stop contributing) vs. keep investing. The gap between the lines is the trade-off: more freedom now vs. a bigger cushion later."],
-              ["⚠️ Not Included", "Taxes: Withdrawals from traditional 401k/IRA are taxed as ordinary income. Roth withdrawals are tax-free. For a rough adjustment, increase your spending by 15-25% to account for taxes.\n\nThis calculator also doesn't include Social Security, pensions, rental income, or other income sources — these would extend how long your money lasts. It also doesn't model portfolio allocation changes over time or market volatility (returns are assumed constant).\n\nWant to see any of these features? Let me know in the feedback below."],
+              ["🧭 A Compass, Not a GPS", "This calculator tells you if you're heading in the right direction. When you can ease off the gas and roughly how long your money will last. For the full picture, work with a financial planner."],
+              ["📊 Today's Dollars", "All values are in today's purchasing power. A 10% return with 3% inflation gives a real return of ~6.8%. Withdrawals are flat because they represent constant purchasing power. $75K always buys the same amount regardless of the year."],
+              ["🔥 Coast FIRE Age", "This is when your balance crosses the 'Coast Target', the amount that would grow on its own to your retirement goal. After this age, you could stop contributing and still reach your target through growth alone."],
+              ["📈 What If I Keep Investing?", "The chart shows both paths: what happens if you coast (stop contributing) vs. keep investing. The gap between the lines is the trade-off: more freedom now vs. a bigger cushion later."],
+              ["⚠️ Not Included", "Taxes: Withdrawals from traditional 401k/IRA are taxed as ordinary income. Roth withdrawals are tax-free. For a rough adjustment, increase your spending by 15-25% to account for taxes.\n\nThis calculator also doesn't include Social Security, pensions, rental income, or other income sources. These would extend how long your money lasts. It also doesn't model portfolio allocation changes over time or market volatility (returns are assumed constant).\n\nWant to see any of these features? Let me know in the feedback below."],
             ].map(([title, body], index) => (
               <div key={index} style={{ marginBottom: 16 }}>
                 <div style={{ fontSize: 14, fontWeight: 700, color: "#1e1b4b", marginBottom: 4 }}>{title}</div>
